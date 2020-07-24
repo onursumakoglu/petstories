@@ -1,0 +1,15 @@
+{{title}}
+
+
+<div class="text-center">
+  <form action="/" method="POST" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="myFile">Ev Hayvanı Yükleyiniz</label>
+			<input class="form-control-file" type="file" id="myFile" name="image">
+			<input type="submit" value="Yükle">
+		</div>
+	</form>
+</div>
+<div *ngFor="let image of images" class="text-center">
+  <img class="rounded mx-auto d-block" width="400" height="500" src="{{image}}"><br>
+</div>
