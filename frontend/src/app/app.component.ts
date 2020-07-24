@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'frontend';
-  images = ["http://127.0.0.1:5000/assets/images/indir.jpg",
-  "http://127.0.0.1:5000/assets/images/maxresdefault.jpg"];
+  
 }

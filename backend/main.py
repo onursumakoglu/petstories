@@ -3,7 +3,6 @@ import glob
 
 from image_validator import image_has_pet
 
-# NEDEN STATİK FOLDER ???
 app = Flask(__name__, static_folder='assets')
 
 
