@@ -1,9 +1,12 @@
-from flask import Flask, request
 import glob
+
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 from image_validator import image_has_pet
 
 app = Flask(__name__, static_folder='assets')
+CORS(app)
 
 
 def anasayfa_oluştur(images, message):
@@ -61,8 +64,9 @@ def anasayfa():
 	images = resimleri_oluştur()
 	return anasayfa_oluştur(images, message)
 
-
-
+@app.route('/get_images_list', methods=["GET"])
+def get_images():
+	return jsonify(glob.glob('assets/images/*.jpg'))
 
 
 app.run()
